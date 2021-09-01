@@ -27,7 +27,6 @@ body{
 	margin: auto;
 	padding:20px;
 	margin-top:10px;
-
 }
 
 
@@ -65,6 +64,20 @@ body{
 	background:green;
 	cursor:pointer;
 }
+.cancel{
+	background-color: #d74a4a !important;
+	border-color: #4cae4c !important;
+	
+}
+.cancel a{
+		text-decoration:none;
+		color:#fff;
+
+}
+.cancel:hover {
+	text-decoration:underline;
+	cursor:pointer;
+}
 .link{
 	margin: auto;
 	margin:10px;
@@ -74,4 +87,9 @@ body{
 }
 .link:hover{
 	text-decoration:underline;
+}
+#forget_email{
+	width:30%;
+	margin:auto;
+	margin-top:2%;
 }

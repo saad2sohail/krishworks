@@ -25,6 +25,21 @@
 			var email = $("#sign_up_email").val();
 			var pwd = $("#sign_up_pswd").val();
 			
+			
+			if (username.length == 0)  {
+				alert('username is empty');
+			}
+			else if(email.length == 0)
+			{
+				alert('email is empty');
+			}
+			else if(pwd.length <= 6)
+			{
+				alert('Password should be at least 6 characters');
+			}
+			else{
+				
+			
 			var url ="https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyClTCMDlrEg2X18KhfIL4R_QqbFpQUQc5Y";
 			var data = "displayName="+username+"&email="+email+"&password="+pwd;
 			
@@ -59,6 +74,9 @@
 					var pwd = $("#sign_up_pswd").val("");	
 				}
 			});
+			}
+			
+			
 			
 		});
 		//login validation
@@ -102,6 +120,8 @@
 			});
 			
 		});
+		
+		
 	});
 
 </script>
@@ -128,9 +148,10 @@
 						<input type="email" placeholder="Email"  class="form_control" id="log_in_email" required>
 						<input type="password" placeholder="Password" class="form_control" id="log_in_password" required>
 						<input type="button" value="Login" class="button" id="log_in">
-						<a href=""  class="link">Forget Password ?</a>
+						<a href="forget_pass.php"  class="link" id='forget_pass'>Forget Password ?</a>
 					</form>
 				</div>
+				
 			</div>
 		</div>
 	
